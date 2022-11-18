@@ -691,9 +691,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, -0.4, 25 )
 [node name="ColumnaTierra26" parent="Bordes/este" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, -0.4, 25 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 0, 4.5 )
-
 [node name="Plataforma" type="Spatial" parent="."]
 
 [node name="PlataformaBase" type="Spatial" parent="Plataforma"]
@@ -836,3 +833,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3.5, 5.5 )
 
 [node name="BloquePendiente12" parent="Plataforma/PlataformaPendiente" instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3.5, 5.5 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 5.5, 4.5 )

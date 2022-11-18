@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://juego/player/BrazoCamara.gd" type="Script" id=1]
+[ext_resource path="res://juego/player/Godotin.gd" type="Script" id=2]
 
-[sub_resource type="CapsuleShape" id=1]
-radius = 0.4
-height = 1.31114
+[sub_resource type="CylinderShape" id=24]
+height = 2.15123
+radius = 0.28818
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.670157, 0.654471, 0.701569, 1 )
@@ -1654,13 +1655,18 @@ node_connections = [ "scale", 0, "walk", "state", 0, "scale", "state", 1, "air_d
 [node name="Player" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
 collision_mask = 6
+script = ExtResource( 2 )
 __meta__ = {
 "__editor_plugin_screen__": "3D"
 }
+velocidad_max = Vector2( 10, 14 )
+gravedad = 1.5
+impulso = 20.0
+fuerza_salto = 5.0
 
-[node name="CollisionCapsule" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.04824, 0 )
-shape = SubResource( 1 )
+[node name="Colisionador" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04824, 0 )
+shape = SubResource( 24 )
 
 [node name="Armature" type="Spatial" parent="."]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0 )
@@ -1824,9 +1830,12 @@ parameters/scale/scale = 1.5
 parameters/state/current = 0
 parameters/walk/blend_amount = 0.0
 
-[node name="SpringArm" type="SpringArm" parent="."]
+[node name="BrazoCamara" type="SpringArm" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+collision_mask = 6
 spring_length = 12.0
 script = ExtResource( 1 )
+rango_rotacion_camara_x = Vector2( -45, -15 )
 
-[node name="Camera" type="Camera" parent="SpringArm"]
+[node name="Camera" type="Camera" parent="BrazoCamara"]
 transform = Transform( 2, 0, 0, 0, 1.97405, 0.321141, 0, -0.321141, 1.97405, 0, 2.74063, 3.3017 )
