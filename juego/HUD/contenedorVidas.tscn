@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://juego/HUD/contenedorInfo.tscn" type="PackedScene" id=1]
+
+[node name="contenedorVidas" instance=ExtResource( 1 )]
+self_modulate = Color( 0, 0.686275, 0.321569, 0.494118 )
+margin_right = 107.0
+margin_bottom = 37.0

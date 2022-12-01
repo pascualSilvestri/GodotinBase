@@ -1,10 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://juego/Bloques/ColumnaTierra.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Bloques/BloqueLargo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://juego/Bloques/BloqueHexagono.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/Bloques/BloquePendiente.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/items/MonedaDorada.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/items/Sierra.tscn" type="PackedScene" id=7]
+[ext_resource path="res://juego/HUD/HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://juego/items/portal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://juego/NIveles/NivelTest.gd" type="Script" id=10]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.0823529, 0.25098, 0.239216, 1 )
@@ -17,8 +22,8 @@ size = Vector2( 50, 50 )
 extents = Vector3( 25, 0.001, 25 )
 
 [sub_resource type="ProceduralSky" id=4]
-sky_top_color = Color( 0.227451, 0.764706, 0.788235, 1 )
-sky_horizon_color = Color( 0.0235294, 0.615686, 0.380392, 1 )
+sky_top_color = Color( 0.788235, 0.45098, 0.227451, 1 )
+sky_horizon_color = Color( 0.109804, 0.615686, 0.0235294, 1 )
 sky_curve = 0.167946
 sky_energy = 2.06
 ground_bottom_color = Color( 0.0470588, 0.466667, 0.882353, 1 )
@@ -33,10 +38,14 @@ sun_energy = 2.0
 [sub_resource type="Environment" id=5]
 background_mode = 2
 background_sky = SubResource( 4 )
+background_energy = 0.86
 
 [node name="NivelTest" type="Node"]
+script = ExtResource( 10 )
+proximi_nivel = "res://juego/NIveles/Nivel1.tscn"
 
 [node name="Suelo" type="StaticBody" parent="."]
+collision_layer = 0
 
 [node name="MeshInstance" type="MeshInstance" parent="Suelo"]
 mesh = SubResource( 2 )
@@ -835,4 +844,27 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3.5, 5.5 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 3.5, 5.5 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 5.5, 4.5 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.6622, 0.181077, 4.5 )
+
+[node name="MonedaDorada" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 5, 11 )
+
+[node name="MonedaDorada3" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 5, 11 )
+
+[node name="MonedaDorada2" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 5, 11 )
+
+[node name="saw" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38739, 1, 0 )
+
+[node name="saw2" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33944, 1, -0.915781 )
+
+[node name="saw3" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37533, 1, 0.897954 )
+
+[node name="HUD" parent="." instance=ExtResource( 8 )]
+
+[node name="portal" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.0632 )

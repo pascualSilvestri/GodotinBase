@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://juego/player/BrazoCamara.gd" type="Script" id=1]
 [ext_resource path="res://juego/player/Godotin.gd" type="Script" id=2]
+[ext_resource path="res://juego/player/ArbolAnimaciones.gd" type="Script" id=3]
 
 [sub_resource type="CylinderShape" id=24]
 height = 2.15123
@@ -834,7 +835,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/keys = PoolRealArray( 0, 1, 9.23872e-07, -3.57628e-07, 5.66244e-07, 0.222344, -0.226466, -0.0274315, 0.947905, 1, 1, 1, 0.05, 1, 6.55651e-07, -1.19209e-07, 2.98023e-07, 0.251975, -0.208305, -0.0408158, 0.944167, 1, 1, 1, 0.15, 1, 1.07288e-06, -3.57628e-07, 5.36442e-07, 0.379887, -0.057225, -0.102903, 0.917509, 1, 1, 1, 0.2, 1, 6.25849e-07, -3.57628e-07, 7.45058e-07, 0.418674, -0.00696497, -0.113328, 0.901011, 1, 1, 1, 0.25, 1, 8.64267e-07, -3.57628e-07, 3.8743e-07, 0.413182, 0.0386478, -0.0801881, 0.906287, 1, 1, 1, 0.3, 1, 9.53674e-07, -4.76837e-07, 5.96046e-07, 0.315261, 0.124735, -0.0152523, 0.940648, 1, 1, 1, 0.4, 1, 6.25849e-07, -3.57628e-07, 4.17233e-07, -0.151881, 0.360683, -0.0357324, 0.919545, 1, 1, 0.999999, 0.45, 1, 6.25849e-07, -3.57628e-07, 7.45058e-07, -0.172392, 0.343529, -0.046079, 0.922034, 1, 1, 0.999999, 0.55, 1, 6.55651e-07, -3.57628e-07, 5.36442e-07, 0.168352, 0.0191591, -0.0776353, 0.982478, 1, 1, 1, 0.6, 1, 9.53674e-07, -3.57628e-07, 3.27826e-07, 0.182793, -0.0233152, -0.109476, 0.976759, 1, 1, 1, 0.65, 1, 4.17233e-07, 0, 1.78814e-07, 0.138039, -0.0157468, -0.121765, 0.982787, 1, 1, 1, 0.7, 1, 6.25849e-07, -2.38419e-07, 1.78814e-07, 0.121673, -0.0809579, -0.109793, 0.983152, 1, 1, 1, 0.75, 1, 9.23872e-07, -3.57628e-07, 7.45058e-07, 0.131274, -0.176942, -0.0767055, 0.972407, 1, 1, 1, 0.8, 1, 5.66244e-07, -1.19209e-07, 5.96046e-07, 0.13073, -0.218021, -0.0501677, 0.965847, 1, 1, 1, 0.85, 1, 2.98023e-08, 0, -5.96046e-08, 0.129118, -0.224691, -0.0428281, 0.964888, 1, 1, 1, 1.25, 1, 2.98023e-08, 0, -5.96046e-08, 0.129118, -0.224691, -0.0428281, 0.964888, 1, 1, 1 )
+tracks/0/keys = PoolRealArray( 0, 1, 9.23872e-07, -3.57628e-07, 5.66244e-07, 0.222344, -0.226466, -0.0274315, 0.947905, 1, 1, 1, 0.05, 1, 6.55651e-07, -1.19209e-07, 2.98023e-07, 0.251975, -0.208305, -0.0408158, 0.944167, 1, 1, 1, 0.15, 1, 1.07288e-06, -3.57628e-07, 5.36442e-07, 0.379887, -0.057225, -0.102903, 0.917509, 1, 1, 1, 0.2, 1, 6.25849e-07, -3.57628e-07, 7.45058e-07, 0.418674, -0.00696497, -0.113328, 0.901011, 1, 1, 1, 0.25, 1, 8.64267e-07, -3.57628e-07, 3.8743e-07, 0.413182, 0.0386478, -0.0801881, 0.906287, 1, 1, 1, 0.3, 1, 9.53674e-07, -4.76837e-07, 5.96046e-07, 0.315261, 0.124735, -0.0152523, 0.940648, 1, 1, 1, 0.4, 1, 6.25849e-07, -3.57628e-07, 4.17233e-07, -0.151881, 0.360683, -0.0357324, 0.919545, 1, 1, 0.999999, 0.45, 1, 6.25849e-07, -3.57628e-07, 7.45058e-07, -0.172392, 0.343529, -0.046079, 0.922034, 1, 1, 0.999999, 0.55, 1, 6.55651e-07, -3.57628e-07, 5.36442e-07, 0.168352, 0.0191591, -0.0776353, 0.982478, 1, 1, 1, 0.6, 1, 9.53674e-07, -3.57628e-07, 3.27826e-07, 0.182793, -0.0233152, -0.109476, 0.976759, 1, 1, 1, 0.65, 1, 4.17233e-07, 0, 1.78814e-07, 0.138039, -0.0157468, -0.121765, 0.982787, 1, 1, 1, 0.7, 1, 6.25849e-07, -2.38419e-07, 1.78814e-07, 0.121673, -0.0809579, -0.109793, 0.983152, 1, 1, 1, 0.75, 1, 9.23872e-07, -3.57628e-07, 7.45058e-07, 0.131274, -0.176942, -0.0767055, 0.972407, 1, 1, 1, 0.8, 1, 5.66244e-07, -1.19209e-07, 5.96046e-07, 0.13073, -0.218021, -0.0501677, 0.965847, 1, 1, 1, 1.1, 1, 2.98023e-08, 0, -5.96046e-08, 0.129118, -0.224691, -0.0428281, 0.964888, 1, 1, 1, 1.25, 1, 2.98023e-08, 0, -5.96046e-08, 0.129118, -0.224691, -0.0428281, 0.964888, 1, 1, 1 )
 tracks/1/type = "transform"
 tracks/1/path = NodePath("Armature/Skeleton:r-forearm")
 tracks/1/interp = 1
@@ -1628,7 +1629,7 @@ input_1/auto_advance = false
 [sub_resource type="AnimationNodeBlend2" id=22]
 
 [sub_resource type="AnimationNodeBlendTree" id=23]
-graph_offset = Vector2( -529.385, -200.775 )
+graph_offset = Vector2( -373.579, -128.558 )
 nodes/Animation/node = SubResource( 17 )
 nodes/Animation/position = Vector2( -260, -280 )
 "nodes/Animation 2/node" = SubResource( 13 )
@@ -1650,7 +1651,63 @@ nodes/state/node = SubResource( 21 )
 nodes/state/position = Vector2( 440, 0 )
 nodes/walk/node = SubResource( 22 )
 nodes/walk/position = Vector2( -40, -240 )
-node_connections = [ "scale", 0, "walk", "state", 0, "scale", "state", 1, "air_dir", "output", 0, "gun", "walk", 0, "Animation", "walk", 1, "Animation 2", "air_dir", 0, "Animation 3", "air_dir", 1, "Animation 4", "gun", 0, "state", "gun", 1, "Animation 5" ]
+node_connections = [ "scale", 0, "walk", "state", 0, "scale", "state", 1, "air_dir", "output", 0, "gun", "gun", 0, "state", "gun", 1, "Animation 5", "air_dir", 0, "Animation 3", "air_dir", 1, "Animation 4", "walk", 0, "Animation", "walk", 1, "Animation 2" ]
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "run-cycle"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "jump-up-cycle"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "falling-cycle"
+
+[sub_resource type="AnimationNodeAnimation" id=38]
+animation = "shooting"
+
+[sub_resource type="AnimationNodeBlend2" id=39]
+
+[sub_resource type="AnimationNodeBlend2" id=36]
+
+[sub_resource type="AnimationNodeBlend2" id=37]
+
+[sub_resource type="AnimationNodeTimeScale" id=30]
+
+[sub_resource type="AnimationNodeTransition" id=33]
+input_count = 2
+xfade_time = 0.1
+input_0/name = "en_suelo"
+input_0/auto_advance = false
+input_1/name = "en_aire"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeBlendTree" id=26]
+graph_offset = Vector2( 41.6292, -49.475 )
+nodes/Animation/node = SubResource( 38 )
+nodes/Animation/position = Vector2( 1013.33, 346.667 )
+"nodes/Animation 2/node" = SubResource( 27 )
+"nodes/Animation 2/position" = Vector2( 160, 106.667 )
+"nodes/Animation 2 2/node" = SubResource( 31 )
+"nodes/Animation 2 2/position" = Vector2( 400, -106.667 )
+"nodes/Animation 6/node" = SubResource( 32 )
+"nodes/Animation 6/position" = Vector2( 373.333, 266.667 )
+"nodes/Animation 7/node" = SubResource( 35 )
+"nodes/Animation 7/position" = Vector2( 400, 453.333 )
+nodes/MezclaDisparar/node = SubResource( 39 )
+nodes/MezclaDisparar/position = Vector2( 1253.33, 186.667 )
+nodes/MezclaIdleCaminar/node = SubResource( 36 )
+nodes/MezclaIdleCaminar/position = Vector2( 693.333, -26.6667 )
+nodes/MezclaSaltarCaer/node = SubResource( 37 )
+nodes/MezclaSaltarCaer/position = Vector2( 693.333, 293.333 )
+nodes/TimeScale/node = SubResource( 30 )
+nodes/TimeScale/position = Vector2( 400, 80 )
+nodes/TransicionSueloCaer/node = SubResource( 33 )
+nodes/TransicionSueloCaer/position = Vector2( 933.333, 106.667 )
+nodes/output/position = Vector2( 1520, 186.667 )
+node_connections = [ "output", 0, "MezclaDisparar", "MezclaSaltarCaer", 0, "Animation 6", "MezclaSaltarCaer", 1, "Animation 7", "TransicionSueloCaer", 0, "MezclaIdleCaminar", "TransicionSueloCaer", 1, "MezclaSaltarCaer", "MezclaIdleCaminar", 0, "Animation 2 2", "MezclaIdleCaminar", 1, "TimeScale", "MezclaDisparar", 0, "TransicionSueloCaer", "MezclaDisparar", 1, "Animation", "TimeScale", 0, "Animation 2" ]
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
@@ -1830,6 +1887,17 @@ parameters/scale/scale = 1.5
 parameters/state/current = 0
 parameters/walk/blend_amount = 0.0
 
+[node name="ArbolAnimaciones" type="AnimationTree" parent="."]
+tree_root = SubResource( 26 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/MezclaDisparar/blend_amount = 0
+parameters/MezclaIdleCaminar/blend_amount = 0
+parameters/MezclaSaltarCaer/blend_amount = 0
+parameters/TimeScale/scale = 1.0
+parameters/TransicionSueloCaer/current = 0
+script = ExtResource( 3 )
+
 [node name="BrazoCamara" type="SpringArm" parent="."]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 collision_mask = 6
@@ -1839,3 +1907,10 @@ rango_rotacion_camara_x = Vector2( -45, -15 )
 
 [node name="Camera" type="Camera" parent="BrazoCamara"]
 transform = Transform( 2, 0, 0, 0, 1.97405, 0.321141, 0, -0.321141, 1.97405, 0, 2.74063, 3.3017 )
+
+[node name="Linterna" type="SpotLight" parent="."]
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -0.498141, 1.24566, 0.568047 )
+light_color = Color( 0.803922, 0.85098, 0.0117647, 1 )
+light_energy = 1.873
+spot_range = 10.0235
+spot_angle = 17.7921
