@@ -33,13 +33,15 @@ _global_script_class_icons={
 [application]
 
 config/name="Godotin"
-run/main_scene="res://juego/NIveles/NivelTest.tscn"
+run/main_scene="res://juego/Menus/MenuPresentacion.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Eventos="*res://juego/Eventos.gd"
 DatosJuego="*res://juego/DatosJuego.gd"
+DatosConfiguracion="*res://juego/DatosConfiguracion.gd"
+CargaSegundoPlano="*res://juego/CargaSegundoPlano.tscn"
 
 [display]
 

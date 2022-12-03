@@ -37,5 +37,9 @@ margin_left = 172.0
 margin_right = 215.0
 margin_bottom = 53.0
 custom_fonts/font = SubResource( 33 )
+toggle_mode = true
 text = "w"
 script = ExtResource( 1 )
+accion = "saltar"
+
+[connection signal="toggled" from="InputAccion" to="InputAccion" method="_on_toggled"]
