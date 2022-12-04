@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://juego/NIveles/NivelTest.tscn" type="PackedScene" id=1]
+
+[node name="NIvel3" instance=ExtResource( 1 )]
+numero_nivel = 3
+
+[node name="portal" parent="." index="13"]
+transform = Transform( 0.0424511, 0, 0.999099, 0, 1, 0, -0.999099, 0, 0.0424511, -2.93627, 4.30792, 11.0241 )

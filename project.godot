@@ -14,10 +14,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://juego/player/ArbolAnimaciones.gd"
 }, {
+"base": "Resource",
+"class": "DatosAjustesGuardado",
+"language": "GDScript",
+"path": "res://juego/almacenamiento/DatosAjustesGuardado.gd"
+}, {
+"base": "Resource",
+"class": "DatosUsuarioGuardado",
+"language": "GDScript",
+"path": "res://juego/almacenamiento/DatosUsuarioGuardado.gd"
+}, {
 "base": "KinematicBody",
 "class": "Godotin",
 "language": "GDScript",
 "path": "res://juego/player/Godotin.gd"
+}, {
+"base": "Node",
+"class": "GuardarCargar",
+"language": "GDScript",
+"path": "res://juego/almacenamiento/CargarGuardar.gd"
 }, {
 "base": "Area",
 "class": "PortalNivel",
@@ -26,7 +41,10 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "ArbolAnimaciones": "",
+"DatosAjustesGuardado": "",
+"DatosUsuarioGuardado": "",
 "Godotin": "",
+"GuardarCargar": "",
 "PortalNivel": ""
 }
 
@@ -34,6 +52,8 @@ _global_script_class_icons={
 
 config/name="Godotin"
 run/main_scene="res://juego/Menus/MenuPresentacion.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Godotin"
 config/icon="res://icon.png"
 
 [autoload]

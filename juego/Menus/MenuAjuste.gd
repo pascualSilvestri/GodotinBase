@@ -1,3 +1,4 @@
+tool
 extends Control
 
 
@@ -55,6 +56,8 @@ func cargar_volumen_buses()->void:
 		
 
 func _on_Button_pressed() -> void:
+	var guardar:GuardarCargar = GuardarCargar.new()
+	guardar.guardar_datos_configuracion()
 	get_tree().change_scene(menu_inicial)
 
 
